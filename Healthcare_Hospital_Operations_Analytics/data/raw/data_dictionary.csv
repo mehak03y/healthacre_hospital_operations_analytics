@@ -1,0 +1,39 @@
+file_name,attribute,pandas_data_type,key_role,description
+patients.csv,patient_id,object,PK,Unique synthetic patient identifier
+patients.csv,gender,object,,Patient gender category
+patients.csv,date_of_birth,object,,Patient date of birth
+patients.csv,age,int64,,Age in years as of 2025-12-31
+patients.csv,city,object,,Patient city
+patients.csv,state,object,,Patient state
+patients.csv,registration_date,object,,Hospital registration date
+patients.csv,blood_group,object,,Synthetic blood group category
+departments.csv,department_id,object,PK,Unique department identifier
+departments.csv,department_name,object,,Hospital department name
+departments.csv,department_type,object,,Broad department category
+departments.csv,bed_capacity,int64,,Nominal number of beds in the department
+departments.csv,head_of_department,object,,Fictional department head
+departments.csv,operating_hours,object,,Department operating hours
+departments.csv,is_emergency_department,bool,,Whether department is designated emergency/critical care
+admissions.csv,admission_id,object,PK,Unique admission identifier
+admissions.csv,patient_id,object,FK -> patients.patient_id,Unique synthetic patient identifier
+admissions.csv,department_id,object,FK -> departments.department_id,Unique department identifier
+admissions.csv,admission_date,object,,Admission timestamp
+admissions.csv,discharge_date,object,,Discharge timestamp
+admissions.csv,admission_type,object,,"Emergency, scheduled, or referral"
+admissions.csv,admission_status,object,,Synthetic final status
+admissions.csv,admission_source,object,,Where the admission originated
+admissions.csv,discharge_type,object,,Discharge destination category
+admissions.csv,waiting_time_minutes,int64,,Synthetic wait from registration to admission
+admissions.csv,length_of_stay_days,float64,,Synthetic stay duration in days
+admissions.csv,attending_physician,object,,Fictional attending physician
+admissions.csv,total_bill_amount,float64,,Synthetic bill amount in INR
+admissions.csv,readmission_flag,bool,,Synthetic readmission indicator; not algorithmically derived
+daily_bed_occupancy.csv,department_id,object,Composite PK part; FK -> departments.department_id,Unique department identifier
+daily_bed_occupancy.csv,occupancy_date,object,Composite PK part,Daily bed snapshot date
+daily_bed_occupancy.csv,total_beds,int64,,Usable bed capacity after out-of-service beds are excluded
+daily_bed_occupancy.csv,occupied_beds,int64,,Occupied beds on snapshot date
+daily_bed_occupancy.csv,available_beds,int64,,"Unoccupied, unreserved beds"
+daily_bed_occupancy.csv,reserved_beds,int64,,Beds reserved but not occupied
+daily_bed_occupancy.csv,out_of_service_beds,int64,,Beds unavailable for service
+daily_bed_occupancy.csv,occupancy_rate,float64,,"Occupied beds divided by usable total beds, multiplied by 100"
+daily_bed_occupancy.csv,average_waiting_time_minutes,float64,,"Synthetic average wait for a bed, in minutes"

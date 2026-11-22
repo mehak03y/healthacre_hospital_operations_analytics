@@ -1,0 +1,11 @@
+department_id,department_name,department_type,bed_capacity,head_of_department,operating_hours,is_emergency_department
+D001,Cardiology,Medical,50,Dr. Meera Sharma,07:00-21:00,False
+D002,Neurology,Medical,35,Dr. Arjun Rao,08:00-20:00,False
+D003,Emergency,Emergency,40,Dr. Kavita Singh,24 Hours,True
+D004,Orthopedics,Surgical,45,Dr. Rohan Mehta,08:00-20:00,False
+D005,General Medicine,Medical,60,Dr. Neha Kapoor,07:00-21:00,False
+D006,Pediatrics,Medical,30,Dr. Sameer Khan,08:00-20:00,False
+D007,Oncology,Specialty,25,Dr. Isha Verma,08:00-18:00,False
+D008,General Surgery,Surgical,40,Dr. Vikram Patel,07:00-20:00,False
+D009,Obstetrics and Gynecology,Specialty,35,Dr. Ananya Das,24 Hours,False
+D010,ICU,Critical Care,20,Dr. Rahul Nair,24 Hours,True
